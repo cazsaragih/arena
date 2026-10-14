@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Arena.StatsWorker/Arena.StatsWorker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Arena.StatsWorker.Tests/Arena.StatsWorker.Tests.csproj" />
+  </Folder>
+</Solution>
