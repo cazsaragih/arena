@@ -2,15 +2,15 @@ namespace Arena.StatsWorker;
 
 public class Worker(ILogger<Worker> logger) : BackgroundService
 {
-    string? name = null;
+    readonly string? _name = null;
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        var display = name ?? "Unnamed player";
+        var display = _name ?? "Unnamed player";
 
-        if (name is { Length > 0 }) 
+        if (_name is { Length: > 0 }) 
         {
-            logger.LogInformation("Hello {0}", name);
+            logger.LogInformation("Hello {0}", _name);
         }
 
         while (!stoppingToken.IsCancellationRequested)
